@@ -4,7 +4,7 @@ const Bodies = Matter.Bodies;
 
 var engine, world;
 var box1, pig1;
-var backgroundImg,platform;
+var backgroundImg,platform, platform2;
 
 function preload() {
     backgroundImg = loadImage("sprites/bg.png");
@@ -17,6 +17,8 @@ function setup(){
 
 
     ground = new Ground(600,height,1200,20);
+    platform2 = new Ground(100,100,200,170);
+
     platform = new Ground(150, 305, 300, 170);
 
     box1 = new Box(700,320,70,70);
@@ -61,4 +63,5 @@ function draw(){
 
     bird.display();
     platform.display();
+    platform2.display();
 }
